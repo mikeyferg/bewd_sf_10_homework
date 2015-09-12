@@ -1,0 +1,11 @@
+<h1><%= @user.name %></h1>
+
+<h3>My Blogs</h3>
+<% @blogs.each do |blog| %>
+<ul>
+  <li><%= blog.title %></li>
+</ul>
+<% end %>
+<h5><%= link_to "Create a New Blog", new_blog_path %></h5>
+
+<h3><%= link_to "See all blogs", blogs_path %></h3>
