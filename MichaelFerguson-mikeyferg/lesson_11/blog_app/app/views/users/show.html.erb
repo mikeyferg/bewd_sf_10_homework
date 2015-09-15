@@ -4,6 +4,9 @@
 <% @blogs.each do |blog| %>
 <ul>
   <li><%= blog.title %></li>
+  <li><%= link_to "Delete Blog", blog_path(blog),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %> </li>
 </ul>
 <% end %>
 <h5><%= link_to "Create a New Blog", new_blog_path %></h5>

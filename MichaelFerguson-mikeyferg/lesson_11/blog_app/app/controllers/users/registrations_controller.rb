@@ -12,6 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super do |resource|
       if resource.errors.present?
         render 'home/index' and return
+        #render 'new' and return
       else
         after_sign_up_path_for(resource)
       end
